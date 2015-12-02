@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+
+ <title>jQuery Demo</title>
+ <link rel="stylesheet" type="text/css" href="prjjQuery.css" /> 
+ <script src="jquery-2.1.1.min.js"></script>  
+ 
+<script>
+//***JAVASCRIPT EXAMPLE #1***
+
+function toggle_visibility(id) {
+    var e = document.getElementById(id); // getElementById is being passed to the variable e for element in the DOM
+    if (e.style.display == 'block' || e.style.display=='') e.style.display = 'none';
+    else e.style.display = 'block';
+}
+
+// ***jQUERY EXAMPLE #1 ***
+$(document).ready(function()
+{
+	$("button").click(function(){
+		$("p").toggle();
+	});
+});
+
+</script>
+</head>
+<body>
+<div id="frame"> 
+ 
+<h1>jQuery Demo</h1>
+<h2><em>jQuery is a JavaScript library</em></h2>
+
+<button><strong>Click to use jQuery</strong></button>
+<!-- <button id='button'>Click</button> -->
+<!--<button onclick="myFunction()">Click me</button> -->
+<!-- <input type="submit" value="Click" onclick="toggle();"></input> -->
+
+<p><strong>Why use jQuery?</strong>&nbsp;&nbsp;jQuery is fast and lightweight which moves in the HTML DOM (Document Object Model) to make animations,
+ manipulates page content, changes the style and provides cool user experience effects.</p>
+<p><strong>Differences</strong>&nbsp;&nbsp;jQuery is a library built in the JavaScript language that helps to use the JavaScript language.&nbsp;&nbsp;</p>
+<p><strong>Popularity</strong>&nbsp;&nbsp;jQuery has become the most popular because it is so easy to use and extremely powerful.</p>
+<p><strong>Starting Point of Code</strong>&nbsp;&nbsp;The starting point of jQuery code execution is $(document).ready() function which is executed when the DOM is loaded.&nbsp;&nbsp;</p></br>
+
+
+<p class="button" onclick="toggle_visibility('hideMe')"><strong>Click to use JavaScript</strong></p> 
+<!-- calls the JavaScript function toggle_visibility(id) which looks for the id="hideMe" below -->
+<p id="hideMe">Hide this by pressing the "Click to use JavaScript button"</p>
+
+<p><strong>Sources:</strong></p><a href="http://stackoverflow.com/questions/20997687/javascript-hiding-and-showing-div-tag-with-a-toggle-button?rq=1" title="Stackoverflow.com">Stackoverflow.com,</a>
+<a href="http://www.w3schools.com/jquery/eff_toggle.asp" title="w3schools.com">w3schools.com,</a>
+<a href="https://blog.udemy.com/jquery-vs-javascript/" title="udemy.com">udemy.com</a>
+
+</div>
+</body>
+</html>
